@@ -4,4 +4,6 @@
     <string name="title_requests">Pedidos</string>
     <string name="title_cart">Carrinho</string>
     <string name="dotted">&#8226;</string>
+    <string name="see_more">ver todos</string>
+    <string name="categories">categories</string>
 </resources>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:layout_marginHorizontal="2dp">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/img_product"
+        android:scaleType="centerCrop"
+        android:padding="4dp"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:background="@color/green"
+        app:shapeAppearanceOverlay="@style/rounded_shop"
+        app:strokeColor="@color/gray_light"
+        app:strokeWidth="3dp" />
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:textAlignment="textStart"
+        android:textSize="14sp"
+        tools:text="Maça" />
+
+    <TextView
+        android:id="@+id/txt_price"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="4dp"
+        android:textAlignment="textStart"
+        android:textColor="@color/green_light"
+        android:textSize="12sp"
+        tools:text="R$ 4,00/Kg" />
+
+</LinearLayout>

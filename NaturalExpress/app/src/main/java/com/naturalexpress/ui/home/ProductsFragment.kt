@@ -6,21 +6,22 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.LinearSnapHelper
 import androidx.recyclerview.widget.RecyclerView
 import co.tiagoaguiar.atway.ui.adapter.ATAdapter
 import com.naturalexpress.R
-import com.naturalexpress.databinding.FragmentProductBinding
-import com.naturalexpress.model.Banner
+import com.naturalexpress.databinding.FragmentProductsBinding
 import com.naturalexpress.model.FilterItem
 import com.naturalexpress.model.toChip
 
-class ProductFragment : Fragment(R.layout.fragment_product) {
+class ProductsFragment : Fragment(R.layout.fragment_products) {
 
-    private var binding: FragmentProductBinding? = null
+    private var binding: FragmentProductsBinding? = null
 
     private val bannerAdapter = ATAdapter({ BannerView(it)})
+    private val categoryAdapter = ATAdapter ({ CategoryView(it)})
 
     private var filters = arrayOf(
         FilterItem("Em Destaque"),
@@ -30,18 +31,24 @@ class ProductFragment : Fragment(R.layout.fragment_product) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
 
-        bannerAdapter.items = arrayListOf(
-            Banner(1, "https://static-images.ifood.com.br/image/upload/t_high/discoveries/itensBasicosNOV21Principal_zE1X.png"),
-            Banner(2, "https://static-images.ifood.com.br/image/upload/t_high/discoveries/Bebidas40offPrincipal_cljA.png"),
-            Banner(3, "https://static-images.ifood.com.br/image/upload/t_high/discoveries/MerceariaeMatinaisPrincipal_mfDO.png"),
-        )
+        homeViewModel.banners.observe(viewLifecycleOwner) {
+            bannerAdapter.items = it
+        }
 
-        binding = FragmentProductBinding.bind(view)
+        homeViewModel.categories.observe(viewLifecycleOwner) {
+            categoryAdapter.items = it
+        }
+
+        binding = FragmentProductsBinding.bind(view)
 
         binding?.let {
             it.rvBanners.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.HORIZONTAL, false)
             it.rvBanners.adapter = bannerAdapter
+
+            it.rvCategory.layoutManager = LinearLayoutManager(requireContext(), LinearLayoutManager.VERTICAL, false)
+            it.rvCategory.adapter = categoryAdapter
 
             it.rvBanners.addOnScrollListener(object : RecyclerView.OnScrollListener() {
                 override fun onScrollStateChanged(recyclerView: RecyclerView, newState: Int) {
