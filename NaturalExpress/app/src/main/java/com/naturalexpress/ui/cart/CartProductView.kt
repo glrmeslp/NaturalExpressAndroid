@@ -6,6 +6,7 @@ import com.naturalexpress.databinding.BannerItemBinding
 import com.naturalexpress.databinding.CartItemBinding
 import com.naturalexpress.model.Banner
 import com.naturalexpress.model.ProductOrder
+import com.naturalexpress.model.Repository
 import com.squareup.picasso.Picasso
 
 class CartProductView(viewGroup: ViewGroup): ATViewHolder<ProductOrder, CartItemBinding>(
@@ -18,6 +19,7 @@ class CartProductView(viewGroup: ViewGroup): ATViewHolder<ProductOrder, CartItem
         binding.txtAmountCartProduct.text = "$amount"
         binding.txtCartProduct.text = item.product.name
         binding.txtPriceCartProduct.text = "R$ $price"
+        item.price = price
 
         binding.plus.setOnClickListener {
             item.amount += 1
@@ -25,6 +27,7 @@ class CartProductView(viewGroup: ViewGroup): ATViewHolder<ProductOrder, CartItem
             val price = item.product.price * item.amount
             binding.txtAmountCartProduct.text = "$amount"
             binding.txtPriceCartProduct.text = "R$ $price"
+            item.price = price
         }
 
         binding.menus.setOnClickListener {
@@ -33,6 +36,7 @@ class CartProductView(viewGroup: ViewGroup): ATViewHolder<ProductOrder, CartItem
             val price = item.product.price * item.amount
             binding.txtAmountCartProduct.text = "$amount"
             binding.txtPriceCartProduct.text = "R$ $price"
+            item.price = price
         }
     }
 }

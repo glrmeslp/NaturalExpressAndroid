@@ -2,6 +2,8 @@ package com.naturalexpress.model
 
 object Repository {
     var order = Order()
+    var orders: ArrayList<Order> = arrayListOf()
+    var address = ""
     var categories: ArrayList<Category> = arrayListOf(
         Category(1,"Legumes",arrayListOf(
             Product(1,"https://s3-alpha-sig.figma.com/img/9eb2/93d6/db3df6132aac245cc2fd0ab3a6bd5ee3?Expires=1646006400&Signature=TD2bAPslqfnIZ~lyDy1lhJ8NeAktvrULfJcdJcZVQcL~gFGgnVtDer~mjYtp~OsK-4a2VKnbotl40kqht-byzfJDTiauCwVFDnVXHH3TD8QcoCol4EyZUZTmm6VywqDapIFp6q7QPkE9HTVmhAIH2~U-fbYS4kNfOKoslf~SwtzJiBf7IeU1O1N9EpfzIPs4aB1tQZVocQGVxpb2hwqfABzEfZYwIzavjADM7gncFCLTFTBLSq57dB2ZKrdQOBL5whnVCZaZPUaR1TJ1lDqRtYmCX46hR9ljKGu4p0PNDxUZ7WXbrYJ7WVyix9PlLCgl1XkUxs-3Txs9qye4avz5Cg__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA","Batata",2.99),

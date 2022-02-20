@@ -47,29 +47,6 @@ class HomeFragment : Fragment() {
         val adapter = ViewPagerAdapter(this)
         viewPager.adapter = adapter
         viewPager.isUserInputEnabled = false
-
-        val button = binding.addressButton
-        button.setOnClickListener {
-            showDialog(it as Button)
-        }
-    }
-
-    fun showDialog(button: Button){
-        val builder: AlertDialog.Builder = android.app.AlertDialog.Builder(requireView().context)
-        builder.setTitle("Endereço")
-        val input = EditText(requireContext())
-// Specify the type of input expected; this, for example, sets the input as a password, and will mask the text
-        input.setHint("Endereço")
-        input.setText(button.text)
-        input.inputType = InputType.TYPE_CLASS_TEXT
-        builder.setView(input)
-        builder.setPositiveButton("OK", DialogInterface.OnClickListener { dialog, which ->
-            var m_Text = input.text.toString()
-            button.text = m_Text
-        })
-        builder.setNegativeButton("Cancel", DialogInterface.OnClickListener { dialog, which -> dialog.cancel() })
-
-        builder.show()
     }
 
     class ViewPagerAdapter(fa: HomeFragment) : FragmentStateAdapter(fa) {
