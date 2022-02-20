@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1034030476570",
+    "project_id": "naturalexpress-2714f",
+    "storage_bucket": "naturalexpress-2714f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1034030476570:android:1b2a0517134be3b32c50a3",
+        "android_client_info": {
+          "package_name": "com.naturalexpress"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1034030476570-jplib4e77i3spb4mivtp78rspu5c0k21.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiPqPBgmaNqon1Ac_KPfmtpjGRxVbkWbo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1034030476570-jplib4e77i3spb4mivtp78rspu5c0k21.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

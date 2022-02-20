@@ -23,16 +23,9 @@ class ProductsFragment : Fragment(R.layout.fragment_products) {
     private val bannerAdapter = ATAdapter({ BannerView(it)})
     private val categoryAdapter = ATAdapter ({ CategoryView(it)})
 
-    private var filters = arrayOf(
-        FilterItem("Em Destaque"),
-        FilterItem("Promoções"),
-        FilterItem("Tudo")
-    )
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val homeViewModel = ViewModelProvider(this).get(HomeViewModel::class.java)
-
         homeViewModel.banners.observe(viewLifecycleOwner) {
             bannerAdapter.items = it
         }
@@ -59,10 +52,6 @@ class ProductsFragment : Fragment(R.layout.fragment_products) {
             })
 
             addDots(it.dots, bannerAdapter.items.size, 0)
-
-            filters.forEach { filter ->
-                it.chipGroupFilter.addView(filter.toChip(requireContext()))
-            }
         }
     }
 
