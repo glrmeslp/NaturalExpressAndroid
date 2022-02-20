@@ -22,13 +22,17 @@ class CartProductView(viewGroup: ViewGroup): ATViewHolder<ProductOrder, CartItem
         binding.plus.setOnClickListener {
             item.amount += 1
             amount = item.amount
+            val price = item.product.price * item.amount
             binding.txtAmountCartProduct.text = "$amount"
+            binding.txtPriceCartProduct.text = "R$ $price"
         }
 
         binding.menus.setOnClickListener {
             item.amount -= 1
             amount = item.amount
+            val price = item.product.price * item.amount
             binding.txtAmountCartProduct.text = "$amount"
+            binding.txtPriceCartProduct.text = "R$ $price"
         }
     }
 }
