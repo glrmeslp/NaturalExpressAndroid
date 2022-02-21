@@ -4,13 +4,6 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="../../../../../../layout/custom_preview.xml" value="0.21944444444444444" />
-        <entry key="..\:/Users/engso/gitrepo/NaturalExpressAndroid/NaturalExpress/app/src/main/res/layout-v28/order_item.xml" value="0.75" />
-        <entry key="..\:/Users/engso/gitrepo/NaturalExpressAndroid/NaturalExpress/app/src/main/res/layout/activity_main.xml" value="0.33" />
-        <entry key="..\:/Users/engso/gitrepo/NaturalExpressAndroid/NaturalExpress/app/src/main/res/layout/category_item.xml" value="0.3074074074074074" />
-        <entry key="..\:/Users/engso/gitrepo/NaturalExpressAndroid/NaturalExpress/app/src/main/res/layout/fragment_home.xml" value="0.3074074074074074" />
-        <entry key="..\:/Users/engso/gitrepo/NaturalExpressAndroid/NaturalExpress/app/src/main/res/layout/fragment_requests.xml" value="0.3074074074074074" />
-        <entry key="..\:/Users/engso/gitrepo/NaturalExpressAndroid/NaturalExpress/app/src/main/res/layout/order_item.xml" value="0.75" />
-        <entry key="..\:/Users/engso/gitrepo/NaturalExpressAndroid/NaturalExpress/app/src/main/res/layout/product_item.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/bookmark_24.xml" value="0.185" />
         <entry key="app/src/main/res/drawable-v24/home_24.xml" value="0.1" />
         <entry key="app/src/main/res/drawable-v24/ic_bookmark_24dp.xml" value="0.1195" />
@@ -24,6 +17,7 @@
         <entry key="app/src/main/res/drawable/ic_bookmark_24dp.xml" value="0.2055" />
         <entry key="app/src/main/res/drawable/ic_bookmark_green_24dp.xml" value="0.1185" />
         <entry key="app/src/main/res/drawable/ic_cross-small_gren_24dp.xml" value="0.1185" />
+        <entry key="app/src/main/res/drawable/ic_cross_small_gren_24dp.xml" value="0.201" />
         <entry key="app/src/main/res/drawable/ic_dashboard_black_24dp.xml" value="0.2535" />
         <entry key="app/src/main/res/drawable/ic_dollar_24dp.xml" value="0.1185" />
         <entry key="app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.2535" />
@@ -45,7 +39,8 @@
         <entry key="app/src/main/res/layout/fragment_home.xml" value="0.3247311827956989" />
         <entry key="app/src/main/res/layout/fragment_product.xml" value="0.2759201049804688" />
         <entry key="app/src/main/res/layout/fragment_products.xml" value="0.13519744873046882" />
-        <entry key="app/src/main/res/layout/fragment_requests.xml" value="0.31068840579710144" />
+        <entry key="app/src/main/res/layout/fragment_requests.xml" value="0.10171928958616391" />
+        <entry key="app/src/main/res/layout/order_item.xml" value="0.3757481892903647" />
         <entry key="app/src/main/res/layout/product_item.xml" value="0.5115293760557433" />
         <entry key="app/src/main/res/menu/bottom_nav_menu.xml" value="0.2935185185185185" />
         <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.2805" />
