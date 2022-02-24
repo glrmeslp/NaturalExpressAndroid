@@ -59,6 +59,9 @@ class CartFragment : Fragment() {
             } else {
                 it.addressButton.text = Repository.address
             }
+            it.btHour.setOnClickListener {
+                showHourDialog()
+            }
 
             it.addressButton.setOnClickListener {
                 showDialog(it as Button)
@@ -86,6 +89,31 @@ class CartFragment : Fragment() {
 
             }
         }
+    }
+
+    private fun showHourDialog() {
+        val singleItems = arrayOf("entre 12:00 - 13:00",
+            "entre 13:00 - 14:00",
+            "entre 14:00 - 15:00",
+            "entre 15:00 - 16:00",
+            "entre 16:00 - 17:00",
+            "entre 17:00 - 18:00",
+        )
+        val checkedItem = 1
+
+        MaterialAlertDialogBuilder(requireContext())
+            .setTitle("Selecionar horário de entrega")
+            .setNeutralButton("cancelar") { dialog, which ->
+                // Respond to neutral button press
+            }
+            .setPositiveButton("okay") { dialog, which ->
+                // Respond to positive button press
+            }
+            // Single-choice items (initialized with checked item)
+            .setSingleChoiceItems(singleItems, checkedItem) { dialog, which ->
+                // Respond to item chosen
+            }
+            .show()
     }
 
     private fun showEmptyCartDialog(string: String) {
