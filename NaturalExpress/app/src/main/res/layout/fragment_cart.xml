@@ -48,6 +48,22 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/bt_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="36dp"
+        android:backgroundTint="@color/gray_light"
+        android:text="agendar horário de entrega"
+        android:textColor="@color/black"
+        app:icon="@drawable/ic_angle_small_right_24dp"
+        app:iconGravity="end"
+        app:iconTint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bt_finalize_order"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
         android:id="@+id/bt_cancel_order"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton"
         android:layout_width="wrap_content"
